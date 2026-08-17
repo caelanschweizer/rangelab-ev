@@ -36,6 +36,13 @@ test("server-renders the RangeLab EV portfolio experience", async () => {
   assert.match(html, /Trip intelligence/);
   assert.match(html, /Scenario planner/);
   assert.match(html, /synthetic/i);
+  assert.match(html, /1\.9(?:<!-- -->)?%/);
+  assert.match(html, /lower MAE vs\. baseline/i);
+  assert.doesNotMatch(html, /−1\.9%/);
+  assert.match(html, /href="https:\/\/github\.com\/caelanschweizer\/rangelab-ev"/i);
+  assert.match(html, /target="_blank"/i);
+  assert.match(html, /rel="noopener noreferrer"/i);
+  assert.match(html, /does not call the API or a vehicle/i);
   assert.match(
     html,
     /property="og:image" content="http:\/\/localhost(?::3000)?\/og\.png"/i,
@@ -55,6 +62,8 @@ test("ships project-owned source and social metadata without starter artifacts",
   assert.match(page, /RangeLabDashboard/);
   assert.match(layout, /summary_large_image/);
   assert.match(layout, /\/og\.png/);
+  assert.match(layout, /width: 1730/);
+  assert.match(layout, /height: 909/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton|drizzle-orm/);
   assert.ok(socialCard.size > 100_000, "social card should be a real generated image");
 
