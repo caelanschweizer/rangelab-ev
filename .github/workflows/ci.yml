@@ -156,7 +156,7 @@ jobs:
         run: docker compose config --quiet
 
       - name: Build web image
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           context: .
           file: Dockerfile
@@ -166,7 +166,7 @@ jobs:
           cache-to: type=gha,mode=max,scope=web
 
       - name: Build API image
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           context: .
           file: Dockerfile.backend
