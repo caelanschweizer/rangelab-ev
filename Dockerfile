@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1.7
 
-FROM node:22.18.0-bookworm-slim AS build
+FROM node:26.7.0-bookworm-slim AS build
 
 ENV PNPM_HOME=/pnpm
 ENV PATH=$PNPM_HOME:$PATH
@@ -15,7 +15,7 @@ RUN --mount=type=cache,id=pnpm,target=/pnpm/store \
 COPY . .
 RUN pnpm build
 
-FROM node:22.18.0-bookworm-slim AS runtime
+FROM node:26.7.0-bookworm-slim AS runtime
 
 ENV NODE_ENV=production
 ENV PORT=3000
