@@ -8,6 +8,8 @@ polished synthetic-data dashboard with a versioned FastAPI analytics service,
 relational persistence, tests, containers, and the documentation needed to
 defend every design choice in an interview.
 
+[**Open the live synthetic dashboard →**](https://rangelab-ev.caelan.chatgpt.site)
+
 > **Demo disclosure:** every value in the public web experience is synthetic.
 > No real route, VIN, account, or raw vehicle log is committed to this project.
 
@@ -197,10 +199,10 @@ Read [Vehicle safety](docs/VEHICLE_SAFETY.md),
 
 ## Demo and project evidence
 
-The web demo publishes through Sites using the checked-in hosting manifest;
-its actual production URL belongs in the repository description and release
-notes after a successful deployment. GitHub Pages is static and cannot host
-the FastAPI/PostgreSQL services. The
+The public web demo is live at
+[rangelab-ev.caelan.chatgpt.site](https://rangelab-ev.caelan.chatgpt.site) and
+publishes through Sites using the checked-in hosting manifest. GitHub Pages is
+static and cannot host the FastAPI/PostgreSQL services. The
 [demo guide](docs/DEMO.md) explains the supported portfolio setup.
 
 Measured résumé claims belong in the [evidence ledger](docs/RESUME.md). The

@@ -3,6 +3,9 @@
 The repository is designed to be reviewable without a Chevrolet Bolt, OBD
 adapter, private dataset, or paid service.
 
+Public synthetic dashboard:
+[rangelab-ev.caelan.chatgpt.site](https://rangelab-ev.caelan.chatgpt.site)
+
 ## Local reviewer path
 
 ```bash
@@ -41,9 +44,8 @@ The checked-in `.openai/hosting.json` marks the web project for Sites. Publishin
 should use the tested production build and keep the public experience in sample
 mode unless a separately secured API is configured.
 
-Sites returns the authoritative production URL after a successful publish.
-Record that exact URL in the repository description and release notes; never
-guess a deployment address in advance.
+The authoritative v1 production URL is
+[rangelab-ev.caelan.chatgpt.site](https://rangelab-ev.caelan.chatgpt.site).
 
 The public Sites demo is frontend-only. The complete API/database stack remains
 repeatable locally through Docker Compose. If a remote API is later
@@ -71,4 +73,4 @@ local stack.
 - No `.env`, database, real log, coordinates, or credentials are staged.
 - Mobile and keyboard behavior has been checked.
 - README links and API examples match the release.
-- The actual published URL—not a guessed URL—is added after deployment.
+- The actual published URL is recorded in the README and repository metadata.

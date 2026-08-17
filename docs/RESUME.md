@@ -18,10 +18,10 @@ Do not count generated or synthetic trips as real Chevrolet Bolt trips. Do not
 quote a test count that includes failed, skipped, or unrelated generated checks
 without saying so.
 
-The current release-candidate evidence is 42 passing backend tests at 89%
-branch-aware coverage plus 4/4 passing frontend `node:test` cases; frontend
-lint, type-check, and production build checks also pass. Treat those as a
-tagged-release résumé claim only after the matching GitHub Actions run is green.
+The v1.0.0 release evidence is 42 passing backend tests at 89% branch-aware
+coverage plus 4/4 passing frontend `node:test` cases; frontend lint,
+type-check, production build, PostgreSQL integration, and both container builds
+also pass in the matching GitHub Actions run.
 
 The seed-2018 synthetic report currently provides a reproducibility example—
 1,908 generated samples, 16 generated trips, and 0.3414 versus 0.3480 kWh
@@ -40,16 +40,17 @@ replace the real-trip placeholders below.
   with **[T] automated tests**, plus data/model cards documenting privacy,
   uncertainty, and failure modes.
 
-If real-trip/model evidence is not ready, use this honest local-release bullet:
+If real-trip/model evidence is not ready, use this honest deployed-release
+bullet:
 
-- Built an EV telemetry portfolio project pairing a versioned FastAPI backend
-  and relational persistence with a responsive, standalone synthetic
+- Deployed an EV telemetry portfolio project pairing a versioned FastAPI
+  backend and relational persistence with a responsive, standalone synthetic
   React/TypeScript dashboard, Docker Compose, and automated GitHub Actions
-  checks.
+  checks ([live demo](https://rangelab-ev.caelan.chatgpt.site)).
 
-Add “deployed” and a demo URL only after the public synthetic web experience is
-actually published. Do not imply that the v1 dashboard uploads to or reads from
-the API; API workflows are demonstrated separately through OpenAPI.
+The public synthetic web experience is now deployed. Do not imply that the v1
+dashboard uploads to or reads from the API; API workflows are demonstrated
+separately through OpenAPI.
 
 ## One-line project description
 
