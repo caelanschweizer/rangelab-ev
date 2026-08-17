@@ -4,7 +4,7 @@
 
 [![CI](https://github.com/caelanschweizer/rangelab-ev/actions/workflows/ci.yml/badge.svg)](https://github.com/caelanschweizer/rangelab-ev/actions/runs/31988801525)
 [![Release v1.0.0](https://img.shields.io/badge/release-v1.0.0-9cff3d)](https://github.com/caelanschweizer/rangelab-ev/releases/tag/v1.0.0)
-[![Live synthetic demo](https://img.shields.io/badge/demo-live-33d6c6)](https://rangelab-ev.caelan.chatgpt.site)
+[![Live synthetic demo](https://img.shields.io/badge/demo-live-33d6c6)](https://rangelab.caelanschweizer.com)
 
 RangeLab EV turns exported, read-only EV logs into validated trips, explainable
 energy metrics, and an honest arrival-charge forecast. The repository pairs a
@@ -12,12 +12,12 @@ polished synthetic-data dashboard with a versioned FastAPI analytics service,
 relational persistence, tests, containers, and the documentation needed to
 defend every design choice in an interview.
 
-[**Open the live synthetic dashboard →**](https://rangelab-ev.caelan.chatgpt.site)
+[**Open the live synthetic dashboard →**](https://rangelab.caelanschweizer.com)
 
 > **Demo disclosure:** every value in the public web experience is synthetic.
 > No real route, VIN, account, or raw vehicle log is committed to this project.
 
-[![RangeLab EV — Bolt telemetry, explained](public/og.png)](https://rangelab-ev.caelan.chatgpt.site)
+[![RangeLab EV — Bolt telemetry, explained](public/og.png)](https://rangelab.caelanschweizer.com)
 
 ## What it demonstrates
 
@@ -207,7 +207,7 @@ Read [Vehicle safety](docs/VEHICLE_SAFETY.md),
 ## Demo and project evidence
 
 The public web demo is live at
-[rangelab-ev.caelan.chatgpt.site](https://rangelab-ev.caelan.chatgpt.site) and
+[rangelab.caelanschweizer.com](https://rangelab.caelanschweizer.com) and
 publishes through Sites using the checked-in hosting manifest. GitHub Pages is
 static and cannot host the FastAPI/PostgreSQL services. The
 [demo guide](docs/DEMO.md) explains the supported portfolio setup.

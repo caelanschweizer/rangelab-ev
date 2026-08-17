@@ -12,7 +12,7 @@ reproducible.
 | Forecast result | Enhanced and baseline MAE on `[K]` chronological holdout trips | Model diagnostics/report tied to a commit |
 | Test coverage | 46 passing automated tests: 42 backend + 4 frontend; 89% backend branch coverage | [v1.0.0 CI run](https://github.com/caelanschweizer/rangelab-ev/actions/runs/31988801525) |
 | Reliability | Import edge cases and API/container checks | Test names and CI workflow |
-| Delivery | Tagged release and standalone public synthetic demo | [v1.0.0 release](https://github.com/caelanschweizer/rangelab-ev/releases/tag/v1.0.0) and [live demo](https://rangelab-ev.caelan.chatgpt.site) |
+| Delivery | Tagged release and standalone public synthetic demo | [v1.0.0 release](https://github.com/caelanschweizer/rangelab-ev/releases/tag/v1.0.0) and [live demo](https://rangelab.caelanschweizer.com) |
 
 Do not count generated or synthetic trips as real Chevrolet Bolt trips. Do not
 quote a test count that includes failed, skipped, or unrelated generated checks
@@ -47,7 +47,7 @@ bullet:
 - Built a locally reproducible EV telemetry platform with a versioned FastAPI
   API, PostgreSQL/SQLite persistence, Docker Compose, and 46 automated tests;
   deployed its standalone synthetic React/TypeScript dashboard
-  ([live demo](https://rangelab-ev.caelan.chatgpt.site)).
+  ([live demo](https://rangelab.caelanschweizer.com)).
 
 The public synthetic web experience is now deployed. Do not imply that the v1
 dashboard uploads to or reads from the API; API workflows are demonstrated

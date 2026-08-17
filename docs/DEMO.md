@@ -4,7 +4,7 @@ The repository is designed to be reviewable without a Chevrolet Bolt, OBD
 adapter, private dataset, or paid service.
 
 Public synthetic dashboard:
-[rangelab-ev.caelan.chatgpt.site](https://rangelab-ev.caelan.chatgpt.site)
+[rangelab.caelanschweizer.com](https://rangelab.caelanschweizer.com)
 
 ## Local reviewer path
 
@@ -47,7 +47,7 @@ should use the tested production build and keep the public experience in sample
 mode unless a separately secured API is configured.
 
 The authoritative v1 production URL is
-[rangelab-ev.caelan.chatgpt.site](https://rangelab-ev.caelan.chatgpt.site).
+[rangelab.caelanschweizer.com](https://rangelab.caelanschweizer.com).
 Only this standalone synthetic dashboard is hosted. The complete FastAPI and
 PostgreSQL stack remains locally reproducible through Docker Compose; it is not
 part of the public deployment. If a remote API is later attached, configure a
