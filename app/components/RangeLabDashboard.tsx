@@ -262,8 +262,14 @@ export default function RangeLabDashboard() {
           <a href="#forecast-lab">Forecast lab</a>
           <a href="#methodology">Method</a>
         </nav>
-        <a className={styles.headerCta} href="#trip-replay">
-          Explore the data <span aria-hidden="true">↓</span>
+        <a
+          className={styles.headerCta}
+          href="https://github.com/caelanschweizer/rangelab-ev"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="View RangeLab EV source code on GitHub (opens in a new tab)"
+        >
+          View source on GitHub <span aria-hidden="true">↗</span>
         </a>
       </header>
 
@@ -320,7 +326,7 @@ export default function RangeLabDashboard() {
           </div>
           <div>
             <span className={styles.trustIcon} aria-hidden="true">R</span>
-            <p><strong>Read-only by design</strong> The pipeline never sends vehicle commands.</p>
+            <p><strong>Read-only by design</strong> Hosted UI uses its fixture; it does not call the API or a vehicle.</p>
           </div>
           <div>
             <span className={styles.trustIcon} aria-hidden="true">P</span>
@@ -563,8 +569,8 @@ export default function RangeLabDashboard() {
             <aside className={styles.evaluationPanel}>
               <p className={styles.eyebrow}>Synthetic walk-forward evaluation</p>
               <div className={styles.improvementValue}>
-                <strong>−{MODEL_EVALUATION.improvementPct}%</strong>
-                <span>mean absolute error</span>
+                <strong>{MODEL_EVALUATION.improvementPct}%</strong>
+                <span>lower MAE vs. baseline</span>
               </div>
               <dl className={styles.evaluationStats}>
                 <div>
@@ -701,7 +707,14 @@ export default function RangeLabDashboard() {
           <span>RangeLab <b>EV</b></span>
         </div>
         <p>Open-source EV telemetry · Built around a 2018 Chevrolet Bolt Premier</p>
-        <a href="#overview">Back to top ↑</a>
+        <a
+          href="https://github.com/caelanschweizer/rangelab-ev"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="View RangeLab EV source code on GitHub (opens in a new tab)"
+        >
+          View source on GitHub ↗
+        </a>
       </footer>
     </div>
   );

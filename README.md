@@ -2,6 +2,10 @@
 
 **Privacy-first telemetry and range intelligence for a 2018 Chevrolet Bolt.**
 
+[![CI](https://github.com/caelanschweizer/rangelab-ev/actions/workflows/ci.yml/badge.svg)](https://github.com/caelanschweizer/rangelab-ev/actions/runs/31988801525)
+[![Release v1.0.0](https://img.shields.io/badge/release-v1.0.0-9cff3d)](https://github.com/caelanschweizer/rangelab-ev/releases/tag/v1.0.0)
+[![Live synthetic demo](https://img.shields.io/badge/demo-live-33d6c6)](https://rangelab-ev.caelan.chatgpt.site)
+
 RangeLab EV turns exported, read-only EV logs into validated trips, explainable
 energy metrics, and an honest arrival-charge forecast. The repository pairs a
 polished synthetic-data dashboard with a versioned FastAPI analytics service,
@@ -13,13 +17,15 @@ defend every design choice in an interview.
 > **Demo disclosure:** every value in the public web experience is synthetic.
 > No real route, VIN, account, or raw vehicle log is committed to this project.
 
+[![RangeLab EV — Bolt telemetry, explained](public/og.png)](https://rangelab-ev.caelan.chatgpt.site)
+
 ## What it demonstrates
 
 - **Full-stack ownership:** React/TypeScript interface, FastAPI, Pydantic,
   SQLAlchemy, SQLite/PostgreSQL, and OpenAPI
-- **Real-world ingestion:** bounded CSV uploads, header normalization, per-row
-  validation with aggregate rejection warnings, unit-aware telemetry, and
-  configurable trip segmentation
+- **Defensive telemetry ingestion:** bounded CSV uploads, header normalization,
+  per-row validation with aggregate rejection warnings, unit-aware telemetry,
+  and configurable trip segmentation
 - **Explainable analytics:** energy use, regeneration, efficiency, summaries,
   and a forecast contract compared with a simple baseline
 - **Engineering judgment:** synthetic-first demos, no vehicle write path,
@@ -105,9 +111,9 @@ pnpm lint
 pnpm test
 ```
 
-Release-candidate verification recorded 4/4 frontend `node:test` cases passing,
-along with lint, type-check, and production build checks. CI reruns the same
-checks from a clean checkout.
+The [v1.0.0 CI run](https://github.com/caelanschweizer/rangelab-ev/actions/runs/31988801525)
+recorded 4/4 frontend `node:test` cases passing, along with lint, type-check,
+and production build checks.
 
 ### API
 
@@ -127,9 +133,10 @@ The native API defaults to a local SQLite database. Run its tests with:
 pytest
 ```
 
-Release-candidate verification recorded 42 passing backend tests with 89%
-branch-aware coverage. CI enforces at least 85% and also exercises a real
-PostgreSQL service through the public API before building both containers.
+The same [v1.0.0 CI run](https://github.com/caelanschweizer/rangelab-ev/actions/runs/31988801525)
+recorded 42 passing backend tests with 89% branch-aware coverage. CI enforces
+at least 85% and also exercises a PostgreSQL service through the public API
+before building both containers.
 
 ## API walkthrough
 
@@ -204,6 +211,10 @@ The public web demo is live at
 publishes through Sites using the checked-in hosting manifest. GitHub Pages is
 static and cannot host the FastAPI/PostgreSQL services. The
 [demo guide](docs/DEMO.md) explains the supported portfolio setup.
+
+Release evidence is preserved in the
+[v1.0.0 release](https://github.com/caelanschweizer/rangelab-ev/releases/tag/v1.0.0)
+and its [successful CI run](https://github.com/caelanschweizer/rangelab-ev/actions/runs/31988801525).
 
 Measured résumé claims belong in the [evidence ledger](docs/RESUME.md). The
 checked-in evaluation supports only the explicitly labeled synthetic numbers;

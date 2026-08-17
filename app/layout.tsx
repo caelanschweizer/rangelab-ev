@@ -4,7 +4,7 @@ import "./globals.css";
 
 const title = "RangeLab EV | Bolt telemetry, explained";
 const description =
-  "A privacy-first EV telemetry lab with trip analytics, data-quality checks, and an honest arrival-charge forecast.";
+  "A synthetic-first EV telemetry portfolio project with trip analytics, visible data checks, and a transparent arrival-charge forecast.";
 
 export async function generateMetadata(): Promise<Metadata> {
   const requestHeaders = await headers();
@@ -30,8 +30,8 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [
         {
           url: socialImage,
-          width: 1792,
-          height: 914,
+          width: 1730,
+          height: 909,
           alt: "RangeLab EV — Bolt telemetry, explained.",
         },
       ],

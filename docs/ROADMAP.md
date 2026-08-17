@@ -5,6 +5,10 @@ reviewable v1 from attractive but unnecessary infrastructure.
 
 ## v1 — portfolio release
 
+Released as [v1.0.0](https://github.com/caelanschweizer/rangelab-ev/releases/tag/v1.0.0),
+with evidence in the
+[successful CI run](https://github.com/caelanschweizer/rangelab-ev/actions/runs/31988801525).
+
 - Standalone synthetic web demo plus an OpenAPI-driven API workflow, both usable
   without a vehicle
 - CSV file/text ingestion with validation and aggregate rejection diagnostics
@@ -17,9 +21,9 @@ reviewable v1 from attractive but unnecessary infrastructure.
 - Data card, model card, privacy design, safety boundary, and PID attribution
 - One-command local setup and a tagged GitHub release
 
-The checkbox for a release item belongs in GitHub Issues or Projects. This file
-describes scope and should not claim completion merely because code exists on a
-working branch.
+Completion tracking belongs in GitHub Issues or Projects. This file describes
+scope; the v1 completion claim is tied to the tagged release and CI evidence
+above rather than merely to code on a working branch.
 
 ## v1.1 — evidence from private real-world use
 
@@ -32,6 +36,8 @@ working branch.
 
 ## v1.2 — product depth
 
+- Optional local upload/history interface backed by the API, while the public
+  hosted demo remains synthetic-only
 - Saved comparison views for cold versus mild conditions
 - Capacity-trend experiment with uncertainty and prominent non-diagnostic label
 - Exportable sanitized trip summary

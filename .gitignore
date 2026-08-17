@@ -53,3 +53,4 @@ yarn-error.log*
 .pnpm-debug.log*
 .vercel/
 /.resume_review/
+/deliverables/

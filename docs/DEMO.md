@@ -36,7 +36,9 @@ architecture, not as evidence that a real vehicle produced those exact values.
 4. Show one importer or domain test for malformed telemetry.
 5. Open the architecture, privacy, and model cards to demonstrate that safety,
    limitations, and evidence were designed with the code.
-6. End on the GitHub Actions run and a tagged release.
+6. End on the
+   [successful v1.0.0 GitHub Actions run](https://github.com/caelanschweizer/rangelab-ev/actions/runs/31988801525)
+   and [tagged release](https://github.com/caelanschweizer/rangelab-ev/releases/tag/v1.0.0).
 
 ## Sites deployment
 
@@ -46,12 +48,12 @@ mode unless a separately secured API is configured.
 
 The authoritative v1 production URL is
 [rangelab-ev.caelan.chatgpt.site](https://rangelab-ev.caelan.chatgpt.site).
-
-The public Sites demo is frontend-only. The complete API/database stack remains
-repeatable locally through Docker Compose. If a remote API is later
-attached, configure a production CORS allowlist, real secrets, upload limits,
-retention/deletion, TLS, monitoring, and authentication before accepting any
-real person's telemetry.
+Only this standalone synthetic dashboard is hosted. The complete FastAPI and
+PostgreSQL stack remains locally reproducible through Docker Compose; it is not
+part of the public deployment. If a remote API is later attached, configure a
+production CORS allowlist, real secrets, upload limits, retention/deletion,
+TLS, monitoring, and authentication before accepting any real person's
+telemetry.
 
 ## GitHub Pages distinction
 
