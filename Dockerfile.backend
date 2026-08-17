@@ -1,0 +1,29 @@
+# syntax=docker/dockerfile:1.7
+
+FROM python:3.12-slim AS runtime
+
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+ENV PIP_DISABLE_PIP_VERSION_CHECK=1
+ENV RANGELAB_DATABASE_URL=sqlite:////data/rangelab.db
+
+WORKDIR /app
+
+COPY backend/pyproject.toml backend/README.md /app/backend/
+COPY backend/src /app/backend/src
+
+RUN python -m pip install --no-cache-dir "/app/backend[postgres]" \
+    && addgroup --system rangelab \
+    && adduser --system --ingroup rangelab rangelab \
+    && mkdir -p /data \
+    && chown -R rangelab:rangelab /data /app
+
+USER rangelab
+WORKDIR /app/backend
+
+EXPOSE 8000
+
+HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
+  CMD python -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=3)"
+
+CMD ["uvicorn", "rangelab.api:app", "--host", "0.0.0.0", "--port", "8000"]

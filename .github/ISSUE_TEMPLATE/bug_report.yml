@@ -1,0 +1,51 @@
+name: Bug report
+description: Report reproducible incorrect behavior using synthetic data.
+title: "bug: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not attach real trip logs, VINs, credentials, or precise coordinates.
+        Report security issues through a private GitHub security advisory.
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Observed behavior
+      description: What happened, and what did you expect instead?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Include steps and the smallest synthetic input that reproduces the problem.
+    validations:
+      required: true
+  - type: input
+    id: commit
+    attributes:
+      label: Version or commit
+      placeholder: v1.0.0 or a commit SHA
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Web dashboard
+        - CSV ingestion
+        - Trip analytics
+        - Forecast/model diagnostics
+        - API or persistence
+        - Docker/CI/documentation
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy confirmation
+      options:
+        - label: I removed real telemetry and personal/vehicle identifiers from this report.
+          required: true

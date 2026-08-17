@@ -1,0 +1,35 @@
+name: Feature request
+description: Propose a scoped improvement with an explicit user benefit.
+title: "feat: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: User problem
+      description: What concrete problem should be easier to solve?
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Proposed outcome
+      description: Describe behavior, not only a technology choice.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Acceptance evidence
+      description: How could tests or a reviewer verify this is complete?
+    validations:
+      required: true
+  - type: checkboxes
+    id: boundaries
+    attributes:
+      label: Project boundaries
+      options:
+        - label: The proposal does not require sending commands to a vehicle.
+          required: true
+        - label: The proposal can be developed and demonstrated without publishing real telemetry.
+          required: true
